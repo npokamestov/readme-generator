@@ -1,4 +1,4 @@
-const generateLicense = licenseText => {
+const generateLicenseBadge = licenseText => {
     let defaultLicense = "";
 
     if (!licenseText) {
@@ -8,28 +8,16 @@ const generateLicense = licenseText => {
 
         switch(licenseText){
 
-            case "Apache 2.0":
+            case "Apache 2.0 License":
                 defaultLicense = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
                 break;
 
-            case "MIT":
-                defaultLicense = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
-                break;
-
-            case "ISC":
-                defaultLicense = "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)";
-                break;
-                
-            case "IBM Public license":
-                defaultLicense = "[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)";    
-                break;
-
-            case "Mozilla Public license":
+            case "Mozilla Public License":
                 defaultLicense = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
                 break;
 
-            case "Artistic license 2.0":
-                defaultLicense = "[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic%202.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)";
+            case "MIT License":
+                defaultLicense = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
                 break;
 
             default:
@@ -39,9 +27,51 @@ const generateLicense = licenseText => {
     return defaultLicense;
   };
 
+const generateLicenseNotice = (licenseText) =>{
+    let message =" ";
+    switch(licenseText) {
+        case "Apache 2.0 License":
+            message = `A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+Permissions | Limitations  |   Conditions
+------------ | ------------  | ------------
+Commercial use | Liability |  License and copyright notice
+Modification | Warranty    |  State changes
+Distribution | Trademark use   |
+Private use |     |
+Patent use |     |`;
+            return message;
+
+        case "Mozilla Public License":
+            message = `Permissions of this weak copyleft license are conditioned on making available source code of licensed files and modifications of those files under the same license (or in certain cases, one of the GNU licenses). Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. However, a larger work using the licensed work may be distributed under different terms and without source code for files added in the larger work
+Permissions | Limitations  |   Conditions
+------------ | ------------  | ------------
+Commercial use | Liability |  License and copyright notice
+Modification | Warranty    |  Same license (file)
+Distribution | Trademark use  |  Disclose source
+Private use |     |
+Patent use |     |`;
+            return message;
+
+        case "MIT License":
+            message = `A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+Permissions | Limitations  |   Conditions
+------------ | ------------  | ------------
+Commercial use | Liability |   License and copyright notice
+Modification | Warranty    |
+Distribution |     |
+Private use |     |`;
+            return message;
+            
+        case "None":
+            return message;    
+    }
+};
+
 
 const generatePage = (data) => {
     return `
+${generateLicenseBadge(data.license)}
+
 # ${data.title}
 
 ## Created by:
@@ -50,7 +80,13 @@ const generatePage = (data) => {
 
 ## License
 
-${generateLicense(data.license)}
+${data.title} is licensed under the
+
+${generateLicenseBadge(data.license)}
+
+${data.license}
+
+${generateLicenseNotice(data.license, data.title)}
 
 ## Description
 

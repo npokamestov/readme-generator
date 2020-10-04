@@ -21,12 +21,9 @@ const questions = () => {
             name: "license",
             message: "Please select a license from the list below.",
             choices: [
-                "Apache 2.0",
-                "MIT",
-                "ISC",
-                "IBM Public license",
-                "Mozilla Public license",
-                "Artistic license 2.0"
+                "Apache 2.0 License",
+                "MIT License",
+                "Mozilla Public License"
             ]
         },
 
