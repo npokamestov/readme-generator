@@ -48,7 +48,7 @@ const questions = () => {
         },
 
         {type: "input",
-            name: "test",
+            name: "tests",
             message: "What command starts the test?",
         },
 

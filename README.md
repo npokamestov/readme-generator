@@ -19,6 +19,7 @@ GitHub: https://github.com/npokamestov/readme-generator
 
 ## Video
 
+https://drive.google.com/file/d/1vGc5axkaNFkz6WnjmMTcETOZNIm6KLUH/view
 
 ## Screenshot
 

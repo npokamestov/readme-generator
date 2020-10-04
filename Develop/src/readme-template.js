@@ -100,9 +100,9 @@ ${data.description}
 
 * [Contributing](#contributing)
 
-* [Test](#test)
+* [Tests](#tests)
 
-* [Contact](#contact)
+* [Questions](#questions)
 
 ## Installation
 
@@ -127,7 +127,7 @@ ${data.contribution}
 To run the tests, run the following command:
 
 \`\`\`
-${data.test}
+${data.tests}
 \`\`\`
 
 ## Questions?

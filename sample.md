@@ -1,5 +1,5 @@
 
-[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Sample README for README Generator
 
@@ -11,18 +11,17 @@
 
 Sample README for README Generator is licensed under the
 
-[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Mozilla Public License
+MIT License
 
-Permissions of this weak copyleft license are conditioned on making available source code of licensed files and modifications of those files under the same license (or in certain cases, one of the GNU licenses). Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. However, a larger work using the licensed work may be distributed under different terms and without source code for files added in the larger work
+A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
 Permissions | Limitations  |   Conditions
 ------------ | ------------  | ------------
-Commercial use | Liability |  License and copyright notice
-Modification | Warranty    |  Same license (file)
-Distribution | Trademark use  |  Disclose source
+Commercial use | Liability |   License and copyright notice
+Modification | Warranty    |
+Distribution |     |
 Private use |     |
-Patent use |     |
 
 ## Description
 
@@ -36,9 +35,9 @@ README Generator to make life easier when it comes to making README's
 
 * [Contributing](#contributing)
 
-* [Test](#test)
+* [Tests](#tests)
 
-* [Contact](#contact)
+* [Questions](#questions)
 
 ## Installation
 
